@@ -15,10 +15,47 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "PHOTO LOG",
+  metadataBase: new URL("https://photo-site-urs8.vercel.app"),
+  title: {
+    default: "PHOTO LOG",
+    template: "%s | PHOTO LOG",
+  },
   description: "Personal photo archive",
   verification: {
-  google: "CkDIm5CEbcrDEfO2EGON2k7MxrJ4Lf_SI_4SctVD1tc",
+    google: "CkDIm5CEbcrDEfO2EGON2k7MxrJ4Lf_SI_4SctVD1tc",
+  },
+  openGraph: {
+    title: "PHOTO LOG",
+    description: "Personal photo archive",
+    url: "https://photo-site-urs8.vercel.app",
+    siteName: "PHOTO LOG",
+    images: [
+      {
+        url: "/photos/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PHOTO LOG",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PHOTO LOG",
+    description: "Personal photo archive",
+    images: ["/photos/profile.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 }
 
@@ -28,14 +65,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950 text-neutral-100`}
       >
-        {/* ✅ 共通ヘッダー */}
         <header className="px-12 pt-10 pb-6">
           <div className="flex items-center justify-between gap-6">
-            {/* Left: Logo */}
             <Link
               href="/"
               className="
@@ -50,7 +85,6 @@ export default function RootLayout({
               PHOTO LOG
             </Link>
 
-            {/* Right: Nav */}
             <nav className="flex items-center gap-6 text-xs tracking-widest text-white/60">
               <Link href="/" className="hover:text-white transition">
                 HOME
@@ -62,7 +96,6 @@ export default function RootLayout({
           </div>
         </header>
 
-        {/* 各ページ */}
         {children}
         <Analytics />
       </body>
