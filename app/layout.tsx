@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PHOTO LOG",
   description: "Personal photo archive",
+  verification: {
+  google: "CkDIm5CEbcrDEfO2EGON2k7MxrJ4Lf_SI_4SctVD1tc",
+  },
 }
 
 export default function RootLayout({
