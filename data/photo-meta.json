@@ -1,14 +1,140 @@
 {
   "/photos/風景/001.jpg": {
-    "location": "TokyoTower"
+    "location": "Azabudai Hills / Tokyo"
   },
   "/photos/風景/2024-03-09_蔵前神社-2.jpg": {
-    "location": "横浜"
+    "location": "Yokohama"
   },
   "/photos/植物/2025-11-08_昭和記念公園(銀杏、紅葉).jpg": {
-    "location": "昭和記念公園"
+    "location": "Showa Kinen Park / Tachikawa"
   },
   "/photos/風景/2025-09-13-14_神戸(北野異人館)〜大阪(万博)-2.jpg": {
-    "location": "大阪万博"
+    "location": "Expo 2025 / Osaka"
+  },
+  "/photos/植物/2025-09-23_昭和記念公園(コスモス).jpg": {
+    "location": "Showa Kinen Park / Tachikawa"
+  },
+  "/photos/植物/2025-06-21_鎌倉〜江ノ島水族館-2.jpg": {
+    "location": "Hase-dera / Kamakura"
+  },
+  "/photos/植物/2025-06-21_鎌倉〜江ノ島水族館.jpg": {
+    "location": "Hase-dera / Kamakura"
+  },
+  "/photos/植物/2025-01-13_山梨旅行-3.jpg": {
+    "location": "Aokigahara / Yamanashi"
+  },
+  "/photos/植物/2025-01-13_山梨旅行-4.jpg": {
+    "location": "Aokigahara / Yamanashi"
+  },
+  "/photos/植物/2025-01-13_山梨旅行.jpg": {
+    "location": "Aokigahara / Yamanashi"
+  },
+  "/photos/植物/2024-03-09_蔵前神社 2.jpg": {
+    "location": "Kuramae Shrine / Tokyo"
+  },
+  "/photos/植物/2024-03-09_蔵前神社.jpg": {
+    "location": "Kuramae Shrine / Tokyo"
+  },
+  "/photos/植物/カバー.jpg": {
+    "location": "Kuramae Shrine / Tokyo"
+  },
+  "/photos/動物/2024-09-20-22_島根・山口・広島旅行-3.jpg": {
+    "location": "Miyajima / Hiroshima"
+  },
+  "/photos/動物/2024-09-20-22_島根・山口・広島旅行のコピー.jpg": {
+    "location": "Shimane"
+  },
+  "/photos/動物/2024-05-06_大阪 海遊館.jpg": {
+    "location": "kaiyukan / Osaka"
+  },
+  "/photos/動物/2024-03-05・07_アクアパーク品川.jpg": {
+    "location": "Shinagawa Aqua Park / Tokyo"
+  },
+  "/photos/動物/2024-02-22_銀座.jpg": {
+    "location": "Ginza / Tokyo"
+  },
+  "/photos/風景/2025-09-13-14_神戸(北野異人館)〜大阪(万博)-3.jpg": {
+    "location": "Expo 2025 / Osaka"
+  },
+  "/photos/風景/2025-09-13-14_神戸(北野異人館)〜大阪(万博).jpg": {
+    "location": "Expo 2025 / Osaka"
+  },
+  "/photos/風景/2025-01-13_山梨旅行-2.jpg": {
+    "location": "Narusawa Ice Cave / Yamanashi"
+  },
+  "/photos/風景/2024-12-30_長野軽井沢-新潟.jpg": {
+    "location": "Karuizawa / Nagano"
+  },
+  "/photos/風景/2024-09-20-22_島根・山口・広島旅行-2.jpg": {
+    "location": "Atomic Bomb Dome / Hiroshima"
+  },
+  "/photos/風景/2024-08-04-05_韓国🇰🇷-2.jpg": {
+    "location": "N Seoul Tower / Seoul"
+  },
+  "/photos/風景/2024-08-04-05_韓国🇰🇷-3.jpg": {
+    "location": "N Seoul Tower / Seoul"
+  },
+  "/photos/風景/2024-08-04-05_韓国🇰🇷.jpg": {
+    "location": "N Seoul Tower / Seoul"
+  },
+  "/photos/風景/2024-05-05_大阪(楽人).jpg": {
+    "location": "Shinsekai / Osaka"
+  },
+  "/photos/風景/2024-09-20-22_島根・山口・広島旅行.jpg": {
+    "location": "Itsukushima Shrine / Hiroshima"
+  },
+  "/photos/風景/2024-09-20-22_島根・山口・広島旅行 2.jpg": {
+    "location": "Inasa Beach / Izumo"
+  },
+  "/photos/風景/2024-02-22_銀座.jpg": {
+    "location": "Ginza / Tokyo"
+  },
+  "/photos/風景/2024-02-10_日本橋・隅田川・スカイツリー.jpg": {
+    "location": "Nihonbashi / Tokyo"
+  },
+  "/photos/風景/2024-02-10_日本橋・隅田川・スカイツリー2.jpg": {
+    "location": "Kachidokibashi / Tokyo"
+  },
+  "/photos/風景/2024-02-10_日本橋・隅田川・スカイツリー3.jpg": {
+    "location": "Sumida river / Tokyo"
+  },
+  "/photos/風景/2024-02-08_レインボーブリッジ・東京タワー.jpg": {
+    "location": "Rainbow bridge / Tokyo"
+  },
+  "/photos/風景/2024-01-13_横須賀軍艦巡り.jpg": {
+    "location": "Yokosuka / Kanagawa"
+  },
+  "/photos/風景/2024-02-10_日本橋・隅田川・スカイツリー4.jpg": {
+    "location": "Tokyo Skytree"
+  },
+  "/photos/風景/2024-01-08_箱根 大涌谷.jpg": {
+    "location": "Mt.Fuji / Yamanashi"
+  },
+  "/photos/風景/2024-01-03_金閣寺・ラコリーナ.jpg": {
+    "location": "Kinkaku-ji / Kyoto"
+  },
+  "/photos/風景/2024-01-02_京都一人旅・滋賀同級生-2.jpg": {
+    "location": "Amanohashidate / Kyoto"
+  },
+  "/photos/風景/2024-01-02_京都一人旅・滋賀同級生-3.jpg": {
+    "location": "Kyoto"
+  },
+  "/photos/風景/2024-01-02_京都一人旅・滋賀同級生.jpg": {
+    "location": "Kyoto"
+  },
+  "/photos/風景/2023-12-30_牛久・イルミネーション.jpg": {
+    "location": "Oarai / Ibaraki"
+  },
+  "/photos/風景/カバー.jpg": {
+    "location": "Kawachi Illumination / Ibaraki"
+  },
+  "/photos/夜景/2024-08-13_新潟の星空.jpg": {
+    "location": "Nigata"
+  },
+  "/photos/夜景/001.jpg": {
+    "location": "N Seoul Tower / Seoul"
+  },
+  "/photos/夜景/カバー.jpg": {
+    "location": "Yokohama"
   }
 }
