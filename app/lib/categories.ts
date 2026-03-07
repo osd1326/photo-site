@@ -17,12 +17,13 @@ export const categories = [
     ja: "風景",
     dir: "風景",
   },
-  {
-    slug: "people",
-    label: "PEOPLE",
-    ja: "人物",
-    dir: "人物",
-  },
+//  プライバシーに観点より非表示
+//  {
+//    slug: "people",
+//    label: "PEOPLE",
+//    ja: "人物",
+//    dir: "人物",
+///  },
   {
     slug: "night",
     label: "NIGHT",

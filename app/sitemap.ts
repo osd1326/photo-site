@@ -24,9 +24,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/category/nature`,
       lastModified: new Date(),
     },
-    {
-      url: `${baseUrl}/category/people`,
-      lastModified: new Date(),
-    },
+ // プライバシーの観点より以下コメントアウト
+ //   {
+ //     url: `${baseUrl}/category/people`,
+ //     lastModified: new Date(),
+ //   },
   ]
 }
