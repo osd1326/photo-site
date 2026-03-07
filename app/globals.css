@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Infinite marquee (transform driven) --- */
+.marquee {
+  overflow: hidden;
+  background: rgb(10 10 10);
+  border-bottom: 1px solid rgb(38 38 38);
+}
+
+.marquee__viewport {
+  cursor: grab;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+}
+
+.marquee__viewport:active {
+  cursor: grabbing;
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.marquee__group {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.25rem 2rem;
+}
+
+/* 横スクロールのスクロールバーを隠す */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 1枚のカード */
+.marquee__item {
+  position: relative;
+  width: 160px;
+  height: 96px;
+  flex: 0 0 auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* 暗→明るい（hover復活） */
+.marquee__item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+.marquee__item:hover::after {
+  opacity: 0;
+}
+.marquee__item:hover {
+  transform: scale(1.03);
+  transition: transform 300ms ease;
+}
+
+/* Hero: subtle ken-burns (very gentle) */
+.hero-kenburns {
+  transform: scale(1.06);
+  animation: heroKenburns 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes heroKenburns {
+  from { transform: scale(1.06) translate3d(0, 0, 0); }
+  to   { transform: scale(1.10) translate3d(-1%, -1%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-kenburns { animation: none; }
+}
+
+/* アクセシビリティ */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    transform: none !important;
+  }
+}
