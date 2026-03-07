@@ -84,7 +84,7 @@ export default function Home() {
   ctaHref="#categories"
 />
       {/* 速度は seconds で調整（大きいほどゆっくり） */}
-      <InfiniteGallery items={shuffledItems} seconds={80} />
+      <InfiniteGallery items={shuffledItems} speedPxPerSec={80} />
 
 <section className="px-12 pt-14 pb-10">
   <h1 className="text-3xl md:text-4xl font-light tracking-[0.35em]">
