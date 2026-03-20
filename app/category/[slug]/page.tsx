@@ -4,21 +4,27 @@ export const revalidate = 0
 
 import fs from "fs"
 import path from "path"
-import exifr from "exifr"
+import type { Metadata } from "next"
 import { categories } from "../../lib/categories"
 import Gallery from "./Gallery"
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const category = categories.find((c) => c.slug === slug)
+  if (!category) return {}
+  return {
+    title: category.label,
+  }
+}
 
 type Photo = {
   src: string
   takenAt?: string
   location?: string 
-}
-
-function formatDate(d: Date) {
-  const y = d.getFullYear()
-  const m = String(d.getMonth() + 1).padStart(2, "0")
-  const day = String(d.getDate()).padStart(2, "0")
-  return `${y}.${m}.${day}`
 }
 
 type SortKey = "new" | "old"
@@ -45,7 +51,7 @@ export default async function CategoryPage({
   const nextCat = categories[(currentIndex + 1) % categories.length]
 
   const META_PATH = path.join(process.cwd(), "data", "photo-meta.json")
-  const meta: Record<string, { location?: string }> =
+  const meta: Record<string, { takenAt?: string; location?: string }> =
     fs.existsSync(META_PATH)
       ? JSON.parse(fs.readFileSync(META_PATH, "utf-8") || "{}")
       : {}
@@ -54,43 +60,18 @@ export default async function CategoryPage({
     ? fs
         .readdirSync(dirPath)
         .filter((f) => /\.(jpg|jpeg|png|webp)$/i.test(f))
-        .filter((f) => f !== "cover.jpg") // ※cover_copy を残すならここは触らない
+        .filter((f) => f !== "cover.jpg")
     : []
 
-  const allPhotos: Photo[] = await Promise.all(
-files.map(async (f) => {
-  const filePath = path.join(dirPath, f)
-  const src = `/photos/${category.dir}/${f}`
-
-  let takenAt: string | undefined
-
-  try {
-    const buffer = fs.readFileSync(filePath)
-    const exif = await exifr.parse(buffer)
-
-    const raw =
-      exif?.DateTimeOriginal ||
-      exif?.CreateDate ||
-      exif?.DateTimeDigitized ||
-      exif?.ModifyDate
-
-    if (raw) {
-      const d = raw instanceof Date ? raw : new Date(raw)
-      if (!Number.isNaN(d.getTime())) takenAt = formatDate(d)
+  const allPhotos: Photo[] = files.map((f) => {
+    const src = `/photos/${category.dir}/${f}`
+    const entry = meta[src] ?? {}
+    return {
+      src,
+      takenAt: entry.takenAt,
+      location: entry.location,
     }
-  } catch {
-    takenAt = undefined
-  }
-
-  const currentLocation = meta[src]?.location
-
-  return {
-    src,
-    takenAt,
-    location: currentLocation,
-  }
-})
-  )
+  })
 
   const sorted = [...allPhotos].sort((a, b) => {
     if (!a.takenAt && !b.takenAt) return 0
@@ -111,6 +92,7 @@ files.map(async (f) => {
   return (
     <Gallery
       photos={pagePhotos}
+      categoryLabel={category.label}
       prevHref={`/category/${prevCat.slug}`}
       prevLabel={prevCat.label}
       nextHref={`/category/${nextCat.slug}`}

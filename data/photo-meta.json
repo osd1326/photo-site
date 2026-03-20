@@ -1,152 +1,235 @@
 {
   "/photos/風景/001.jpg": {
-    "location": "Azabudai Hills / Tokyo"
+    "location": "Azabudai Hills / Tokyo",
+    "takenAt": "2024.03.27"
   },
   "/photos/風景/2024-03-09_蔵前神社-2.jpg": {
-    "location": "Yokohama"
+    "location": "Yokohama",
+    "takenAt": "2024.03.09"
   },
   "/photos/植物/2025-11-08_昭和記念公園(銀杏、紅葉).jpg": {
-    "location": "Showa Kinen Park / Tachikawa"
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2025.11.08"
   },
   "/photos/風景/2025-09-13-14_神戸(北野異人館)〜大阪(万博)-2.jpg": {
-    "location": "Expo 2025 / Osaka"
+    "location": "Expo 2025 / Osaka",
+    "takenAt": "2025.09.14"
   },
   "/photos/植物/2025-09-23_昭和記念公園(コスモス).jpg": {
-    "location": "Showa Kinen Park / Tachikawa"
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2025.09.23"
   },
   "/photos/植物/2025-06-21_鎌倉〜江ノ島水族館-2.jpg": {
-    "location": "Hase-dera / Kamakura"
+    "location": "Hase-dera / Kamakura",
+    "takenAt": "2025.06.21"
   },
   "/photos/植物/2025-06-21_鎌倉〜江ノ島水族館.jpg": {
-    "location": "Hase-dera / Kamakura"
+    "location": "Hase-dera / Kamakura",
+    "takenAt": "2025.06.21"
   },
   "/photos/植物/2025-01-13_山梨旅行-3.jpg": {
-    "location": "Aokigahara / Yamanashi"
+    "location": "Aokigahara / Yamanashi",
+    "takenAt": "2025.01.13"
   },
   "/photos/植物/2025-01-13_山梨旅行-4.jpg": {
-    "location": "Aokigahara / Yamanashi"
+    "location": "Aokigahara / Yamanashi",
+    "takenAt": "2025.01.13"
   },
   "/photos/植物/2025-01-13_山梨旅行.jpg": {
-    "location": "Aokigahara / Yamanashi"
+    "location": "Aokigahara / Yamanashi",
+    "takenAt": "2025.01.13"
   },
   "/photos/植物/2024-03-09_蔵前神社 2.jpg": {
-    "location": "Kuramae Shrine / Tokyo"
+    "location": "Kuramae Shrine / Tokyo",
+    "takenAt": "2024.03.09"
   },
   "/photos/植物/2024-03-09_蔵前神社.jpg": {
-    "location": "Kuramae Shrine / Tokyo"
+    "location": "Kuramae Shrine / Tokyo",
+    "takenAt": "2024.03.09"
   },
   "/photos/植物/カバー.jpg": {
-    "location": "Kuramae Shrine / Tokyo"
+    "location": "Kuramae Shrine / Tokyo",
+    "takenAt": "2024.03.09"
   },
   "/photos/動物/2024-09-20-22_島根・山口・広島旅行-3.jpg": {
-    "location": "Miyajima / Hiroshima"
+    "location": "Miyajima / Hiroshima",
+    "takenAt": "2024.09.22"
   },
   "/photos/動物/2024-09-20-22_島根・山口・広島旅行のコピー.jpg": {
-    "location": "Shimane"
+    "location": "Shimane",
+    "takenAt": "2024.09.20"
   },
   "/photos/動物/2024-05-06_大阪 海遊館.jpg": {
-    "location": "kaiyukan / Osaka"
+    "location": "kaiyukan / Osaka",
+    "takenAt": "2024.05.06"
   },
   "/photos/動物/2024-03-05・07_アクアパーク品川.jpg": {
-    "location": "Shinagawa Aqua Park / Tokyo"
+    "location": "Shinagawa Aqua Park / Tokyo",
+    "takenAt": "2024.03.07"
   },
   "/photos/動物/2024-02-22_銀座.jpg": {
-    "location": "Ginza / Tokyo"
+    "location": "Ginza / Tokyo",
+    "takenAt": "2024.02.22"
   },
   "/photos/風景/2025-09-13-14_神戸(北野異人館)〜大阪(万博)-3.jpg": {
-    "location": "Expo 2025 / Osaka"
+    "location": "Expo 2025 / Osaka",
+    "takenAt": "2025.09.14"
   },
   "/photos/風景/2025-09-13-14_神戸(北野異人館)〜大阪(万博).jpg": {
-    "location": "Expo 2025 / Osaka"
+    "location": "Expo 2025 / Osaka",
+    "takenAt": "2025.09.14"
   },
   "/photos/風景/2025-01-13_山梨旅行-2.jpg": {
-    "location": "Narusawa Ice Cave / Yamanashi"
+    "location": "Narusawa Ice Cave / Yamanashi",
+    "takenAt": "2025.01.13"
   },
   "/photos/風景/2024-12-30_長野軽井沢-新潟.jpg": {
-    "location": "Karuizawa / Nagano"
+    "location": "Karuizawa / Nagano",
+    "takenAt": "2024.12.30"
   },
   "/photos/風景/2024-09-20-22_島根・山口・広島旅行-2.jpg": {
-    "location": "Atomic Bomb Dome / Hiroshima"
+    "location": "Atomic Bomb Dome / Hiroshima",
+    "takenAt": "2024.09.22"
   },
   "/photos/風景/2024-08-04-05_韓国🇰🇷-2.jpg": {
-    "location": "N Seoul Tower / Seoul"
+    "location": "N Seoul Tower / Seoul",
+    "takenAt": "2024.08.04"
   },
   "/photos/風景/2024-08-04-05_韓国🇰🇷-3.jpg": {
-    "location": "N Seoul Tower / Seoul"
+    "location": "N Seoul Tower / Seoul",
+    "takenAt": "2024.08.04"
   },
   "/photos/風景/2024-08-04-05_韓国🇰🇷.jpg": {
-    "location": "N Seoul Tower / Seoul"
+    "location": "N Seoul Tower / Seoul",
+    "takenAt": "2024.08.04"
   },
   "/photos/風景/2024-05-05_大阪(楽人).jpg": {
-    "location": "Shinsekai / Osaka"
+    "location": "Shinsekai / Osaka",
+    "takenAt": "2024.05.05"
   },
   "/photos/風景/2024-09-20-22_島根・山口・広島旅行.jpg": {
-    "location": "Itsukushima Shrine / Hiroshima"
+    "location": "Itsukushima Shrine / Hiroshima",
+    "takenAt": "2024.09.22"
   },
   "/photos/風景/2024-09-20-22_島根・山口・広島旅行 2.jpg": {
-    "location": "Inasa Beach / Izumo"
+    "location": "Inasa Beach / Izumo",
+    "takenAt": "2024.09.20"
   },
   "/photos/風景/2024-02-22_銀座.jpg": {
-    "location": "Ginza / Tokyo"
+    "location": "Ginza / Tokyo",
+    "takenAt": "2024.02.22"
   },
   "/photos/風景/2024-02-10_日本橋・隅田川・スカイツリー.jpg": {
-    "location": "Nihonbashi / Tokyo"
+    "location": "Nihonbashi / Tokyo",
+    "takenAt": "2024.02.10"
   },
   "/photos/風景/2024-02-10_日本橋・隅田川・スカイツリー2.jpg": {
-    "location": "Kachidokibashi / Tokyo"
+    "location": "Kachidokibashi / Tokyo",
+    "takenAt": "2024.02.10"
   },
   "/photos/風景/2024-02-10_日本橋・隅田川・スカイツリー3.jpg": {
-    "location": "Sumida river / Tokyo"
+    "location": "Sumida river / Tokyo",
+    "takenAt": "2024.02.10"
   },
   "/photos/風景/2024-02-08_レインボーブリッジ・東京タワー.jpg": {
-    "location": "Rainbow bridge / Tokyo"
+    "location": "Rainbow bridge / Tokyo",
+    "takenAt": "2024.02.08"
   },
   "/photos/風景/2024-01-13_横須賀軍艦巡り.jpg": {
-    "location": "Yokosuka / Kanagawa"
+    "location": "Yokosuka / Kanagawa",
+    "takenAt": "2024.01.13"
   },
   "/photos/風景/2024-02-10_日本橋・隅田川・スカイツリー4.jpg": {
-    "location": "Tokyo Skytree"
+    "location": "Tokyo Skytree",
+    "takenAt": "2024.02.10"
   },
   "/photos/風景/2024-01-08_箱根 大涌谷.jpg": {
-    "location": "Mt.Fuji / Yamanashi"
+    "location": "Mt.Fuji / Yamanashi",
+    "takenAt": "2024.01.08"
   },
   "/photos/風景/2024-01-03_金閣寺・ラコリーナ.jpg": {
-    "location": "Kinkaku-ji / Kyoto"
+    "location": "Kinkaku-ji / Kyoto",
+    "takenAt": "2024.01.03"
   },
   "/photos/風景/2024-01-02_京都一人旅・滋賀同級生-2.jpg": {
-    "location": "Amanohashidate / Kyoto"
+    "location": "Amanohashidate / Kyoto",
+    "takenAt": "2024.01.02"
   },
   "/photos/風景/2024-01-02_京都一人旅・滋賀同級生-3.jpg": {
-    "location": "Kyoto"
+    "location": "Kyoto",
+    "takenAt": "2024.01.02"
   },
   "/photos/風景/2024-01-02_京都一人旅・滋賀同級生.jpg": {
-    "location": "Kyoto"
+    "location": "Kyoto",
+    "takenAt": "2024.01.02"
   },
   "/photos/風景/2023-12-30_牛久・イルミネーション.jpg": {
-    "location": "Oarai / Ibaraki"
+    "location": "Oarai / Ibaraki",
+    "takenAt": "2023.12.30"
   },
   "/photos/風景/カバー.jpg": {
-    "location": "Kawachi Illumination / Ibaraki"
+    "location": "Kawachi Illumination / Ibaraki",
+    "takenAt": "2023.12.30"
   },
   "/photos/夜景/2024-08-13_新潟の星空.jpg": {
-    "location": "Nigata"
+    "location": "Nigata",
+    "takenAt": "2024.08.13"
   },
   "/photos/夜景/001.jpg": {
-    "location": "N Seoul Tower / Seoul"
+    "location": "N Seoul Tower / Seoul",
+    "takenAt": "2024.08.04"
   },
   "/photos/夜景/カバー.jpg": {
-    "location": "Yokohama"
+    "location": "Yokohama",
+    "takenAt": "2024.01.27"
   },
   "/photos/植物/2025-11-30_昭和記念公園(立川C).jpg": {
-    "location": "Showa Kinen Park / Tachikawa"
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2025.11.30"
   },
   "/photos/風景/2025-11-30_昭和記念公園(立川C)-2.jpg": {
-    "location": "Showa Kinen Park / Tachikawa"
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2025.11.30"
   },
   "/photos/風景/2025-11-30_昭和記念公園(立川C)-3.jpg": {
-    "location": "Showa Kinen Park / Tachikawa"
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2025.11.30"
   },
   "/photos/風景/2025-11-08_昭和記念公園(銀杏、紅葉)-2.jpg": {
-    "location": "Showa Kinen Park / Tachikawa"
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2025.11.08"
+  },
+  "/photos/人物/2024-05-18_ハリーポッター スタジオツアー東京-5.jpg": {
+    "takenAt": "2024.05.18"
+  },
+  "/photos/人物/2024-05-18_ハリーポッター スタジオツアー東京.jpg": {
+    "takenAt": "2024.05.18"
+  },
+  "/photos/人物/2025-01-13_山梨旅行.jpg": {
+    "takenAt": "2025.01.13"
+  },
+  "/photos/人物/2025-11-14_BBQ(ホーム旅).jpg": {
+    "takenAt": "2025.11.24"
+  },
+  "/photos/人物/cover.jpg": {
+    "takenAt": "2023.12.30"
+  },
+  "/photos/人物/son.jpg": {
+    "takenAt": "2024.07.27"
+  },
+  "/photos/人物/カバー.jpg": {
+    "takenAt": "2023.12.30"
+  },
+  "/photos/動物/cover.jpg": {
+    "takenAt": "2024.07.23"
+  },
+  "/photos/夜景/cover.jpg": {
+    "takenAt": "2024.01.27"
+  },
+  "/photos/植物/cover.jpg": {
+    "takenAt": "2024.03.09"
+  },
+  "/photos/風景/cover.jpg": {
+    "takenAt": "2023.12.30"
   }
 }

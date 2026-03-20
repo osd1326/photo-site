@@ -10,13 +10,8 @@
 }
 
 .marquee__viewport {
-  cursor: grab;
   touch-action: pan-x;
   -webkit-overflow-scrolling: touch;
-}
-
-.marquee__viewport:active {
-  cursor: grabbing;
 }
 
 .marquee__track {

@@ -16,6 +16,7 @@ type SortKey = "new" | "old"
 
 type Props = {
   photos: Photo[]
+  categoryLabel: string
   prevHref: string
   prevLabel: string
   nextHref: string
@@ -29,6 +30,7 @@ type Props = {
 
 export default function Gallery({
   photos,
+  categoryLabel,
   prevHref,
   prevLabel,
   nextHref,
@@ -83,6 +85,10 @@ export default function Gallery({
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100 px-12 py-16">
       <header className="mb-10 flex items-end justify-between gap-6">
+        <div>
+          <p className="text-xs tracking-[0.45em] text-white/45 mb-2">CATEGORY</p>
+          <h1 className="text-3xl md:text-4xl font-light tracking-[0.35em]">{categoryLabel}</h1>
+        </div>
         <div className="flex items-center gap-3 text-xs tracking-widest text-white/60">
           <span className="hidden sm:inline">SORT</span>
           <select

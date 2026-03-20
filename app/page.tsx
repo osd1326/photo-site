@@ -87,9 +87,9 @@ export default function Home() {
       <InfiniteGallery items={shuffledItems} speedPxPerSec={80} />
 
 <section className="px-12 pt-14 pb-10">
-  <h1 className="text-3xl md:text-4xl font-light tracking-[0.35em]">
+  <h2 className="text-3xl md:text-4xl font-light tracking-[0.35em]">
     PHOTO LOG
-  </h1>
+  </h2>
 
   <p className="mt-4 text-sm md:text-base text-white/60 tracking-wider">
     Street / Nature / Night - captured quietly, archived carefully.

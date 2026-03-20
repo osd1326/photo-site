@@ -89,6 +89,7 @@ export default function InfiniteGallery({
                         fill
                         className="object-cover rounded-lg"
                         sizes="160px"
+                        quality={60}
                         draggable={false}
                       />
                     </div>
