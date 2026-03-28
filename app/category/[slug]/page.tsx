@@ -65,7 +65,7 @@ export default async function CategoryPage({
 
   const allPhotos: Photo[] = files.map((f) => {
     const src = `/photos/${category.dir}/${f}`
-    const entry = meta[src] ?? {}
+    const entry = meta[decodeURIComponent(src)] ?? meta[src] ?? {}
     return {
       src,
       takenAt: entry.takenAt,
