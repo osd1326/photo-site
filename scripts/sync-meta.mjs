@@ -47,7 +47,7 @@ for (const dir of dirs) {
 
   for (const file of files) {
     const src = `/photos/${dir}/${file}`
-    const existing = meta[src] ?? {}
+    const existing = meta[src.normalize("NFC")] ?? {}
 
     // takenAt がすでにあればスキップ
     if (existing.takenAt) {
@@ -75,12 +75,13 @@ for (const dir of dirs) {
       // EXIFが読めない場合はスキップ
     }
 
-    meta[src] = { ...existing, ...(takenAt ? { takenAt } : {}) }
+    const nfcSrc = src.normalize("NFC")
+    meta[nfcSrc] = { ...existing, ...(takenAt ? { takenAt } : {}) }
     if (takenAt) {
-      console.log(`✓ ${src} → ${takenAt}`)
+      console.log(`✓ ${nfcSrc} → ${takenAt}`)
       updated++
     } else {
-      console.log(`– ${src} → EXIF not found`)
+      console.log(`– ${nfcSrc} → EXIF not found`)
     }
   }
 }

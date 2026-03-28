@@ -64,10 +64,11 @@ export default async function CategoryPage({
     : []
 
   const allPhotos: Photo[] = files.map((f) => {
-    const decodedF = decodeURIComponent(f)
     const decodedDir = decodeURIComponent(category.dir)
+    const decodedF = decodeURIComponent(f)
     const src = `/photos/${decodedDir}/${decodedF}`
-    const entry = meta[src] ?? {}
+    const nfcSrc = src.normalize("NFC")
+    const entry = meta[nfcSrc] ?? {}
     return {
       src,
       takenAt: entry.takenAt,
