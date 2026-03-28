@@ -45,9 +45,10 @@ export async function POST(req: Request) {
     }
 
     const meta = readMeta()
+    const nfcSrc = src.normalize("NFC")
 
-    meta[src] = {
-      ...(meta[src] ?? {}),
+    meta[nfcSrc] = {
+      ...(meta[nfcSrc] ?? {}),
       ...(title !== undefined ? { title } : {}),
       ...(tags !== undefined ? { tags } : {}),
       ...(location !== undefined ? { location } : {}),
@@ -58,7 +59,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({
       ok: true,
-      meta: meta[src],
+      meta: meta[nfcSrc],
     })
   } catch (e: any) {
     return NextResponse.json(
