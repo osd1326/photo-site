@@ -231,5 +231,11 @@
   },
   "/photos/風景/cover.jpg": {
     "takenAt": "2023.12.30"
+  },
+  "/photos/動物/2023-12-22_アクアパーク品川・上野美術館.jpg": {
+    "location": "Shinagawa Aqua Park / Tokyo"
+  },
+  "/photos/夜景/2023-12-29_横浜(黒木).jpg": {
+    "location": "Yokohama"
   }
 }
