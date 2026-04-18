@@ -243,5 +243,69 @@
   "/photos/動物/2023-12-22_アクアパーク品川・上野美術館.jpg": {
     "takenAt": "2023.12.22",
     "location": "Shinagawa Aqua Park / Tokyo"
+  },
+  "/photos/植物/2026-04-03-2.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.03"
+  },
+  "/photos/植物/2026-04-03-3.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.03"
+  },
+  "/photos/植物/2026-04-03-4.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.03"
+  },
+  "/photos/植物/2026-04-03_昭和記念公園-3.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.03"
+  },
+  "/photos/植物/2026-04-03.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.03"
+  },
+  "/photos/植物/2026-04-03_昭和記念公園-5.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.03"
+  },
+  "/photos/植物/2026-04-03_昭和記念公園.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.03"
+  },
+  "/photos/植物/2026-04-12_昭和記念公園-20.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.12"
+  },
+  "/photos/植物/2026-04-12_昭和記念公園-23.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.12"
+  },
+  "/photos/植物/2026-04-12_昭和記念公園-25.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.12"
+  },
+  "/photos/植物/2026-03-29_桜(野川公園)-6.jpg": {
+    "location": "Nogawa Park / Chohu",
+    "takenAt": "2026.03.29"
+  },
+  "/photos/植物/2026-03-29_桜(野川公園)-9.jpg": {
+    "location": "Nogawa Park / Chohu",
+    "takenAt": "2026.03.29"
+  },
+  "/photos/植物/2026-04-12_昭和記念公園-34.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.12"
+  },
+  "/photos/植物/2026-04-12_昭和記念公園.jpg": {
+    "location": "Showa Kinen Park / Tachikawa",
+    "takenAt": "2026.04.12"
+  },
+  "/photos/風景/2026-03-29_桜(野川公園)-2.jpg": {
+    "location": "Nogawa Park / Chohu",
+    "takenAt": "2026.03.29"
+  },
+  "/photos/風景/2026-03-29_桜(野川公園)-3.jpg": {
+    "location": "Nogawa Park / Chohu",
+    "takenAt": "2026.03.29"
   }
 }
