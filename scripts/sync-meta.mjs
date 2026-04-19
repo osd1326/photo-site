@@ -3,16 +3,17 @@
  *
  * 使い方: node scripts/sync-meta.mjs
  *
- * public/photos/ 以下の画像を走査し、EXIFから撮影日(takenAt)を読み取って
+ * public/photos/ 以下の画像を走査し、
+ * - EXIFから撮影日(takenAt)を読み取る
+ * - sharpで実際の画像サイズ(width/height)を取得
  * data/photo-meta.json に書き込む。
- * - すでに takenAt が記録されている写真はスキップ（上書きしない）
- * - location など既存フィールドはそのまま保持
  */
 
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
 import exifr from "exifr"
+import sharp from "sharp"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, "..")
@@ -26,12 +27,10 @@ function formatDate(d) {
   return `${y}.${m}.${day}`
 }
 
-// 既存のメタを読み込む
 const meta = fs.existsSync(META_PATH)
   ? JSON.parse(fs.readFileSync(META_PATH, "utf-8") || "{}")
   : {}
 
-// public/photos/ 直下のディレクトリを走査
 const dirs = fs.readdirSync(PHOTOS_DIR).filter((d) => {
   return fs.statSync(path.join(PHOTOS_DIR, d)).isDirectory()
 })
@@ -47,45 +46,60 @@ for (const dir of dirs) {
 
   for (const file of files) {
     const src = `/photos/${dir}/${file}`
-    const existing = meta[src.normalize("NFC")] ?? {}
+    const nfcSrc = src.normalize("NFC")
+    const existing = meta[nfcSrc] ?? {}
 
-    // takenAt がすでにあればスキップ
-    if (existing.takenAt) {
+    if (existing.takenAt && existing.width && existing.height) {
       skipped++
       continue
     }
 
     const filePath = path.join(dirPath, file)
-    let takenAt
+    let takenAt = existing.takenAt
+    let width = existing.width
+    let height = existing.height
 
-    try {
-      const buffer = fs.readFileSync(filePath)
-      const exif = await exifr.parse(buffer)
-      const raw =
-        exif?.DateTimeOriginal ||
-        exif?.CreateDate ||
-        exif?.DateTimeDigitized ||
-        exif?.ModifyDate
-
-      if (raw) {
-        const d = raw instanceof Date ? raw : new Date(raw)
-        if (!Number.isNaN(d.getTime())) takenAt = formatDate(d)
+    // takenAt: EXIFから取得
+    if (!takenAt) {
+      try {
+        const buffer = fs.readFileSync(filePath)
+        const exif = await exifr.parse(buffer)
+        const raw =
+          exif?.DateTimeOriginal ||
+          exif?.CreateDate ||
+          exif?.DateTimeDigitized ||
+          exif?.ModifyDate
+        if (raw) {
+          const d = raw instanceof Date ? raw : new Date(raw)
+          if (!Number.isNaN(d.getTime())) takenAt = formatDate(d)
+        }
+      } catch {
+        // EXIFが読めない場合はスキップ
       }
-    } catch {
-      // EXIFが読めない場合はスキップ
     }
 
-    const nfcSrc = src.normalize("NFC")
-    meta[nfcSrc] = { ...existing, ...(takenAt ? { takenAt } : {}) }
-    if (takenAt) {
-      console.log(`✓ ${nfcSrc} → ${takenAt}`)
-      updated++
-    } else {
-      console.log(`– ${nfcSrc} → EXIF not found`)
+    // width/height: sharpで実際の画像サイズを取得
+    if (!width || !height) {
+      try {
+        const metadata = await sharp(filePath).metadata()
+        width = metadata.width
+        height = metadata.height
+      } catch {
+        // 読めない場合はスキップ
+      }
     }
+
+    meta[nfcSrc] = {
+      ...existing,
+      ...(takenAt ? { takenAt } : {}),
+      ...(width ? { width } : {}),
+      ...(height ? { height } : {}),
+    }
+
+    console.log(`✓ ${nfcSrc} → takenAt:${takenAt ?? "—"} ${width ?? "?"}x${height ?? "?"}`)
+    updated++
   }
 }
 
-// 書き戻す
 fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2), "utf-8")
 console.log(`\n完了: ${updated} 件更新, ${skipped} 件スキップ`)
