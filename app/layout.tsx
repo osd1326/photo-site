@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
@@ -69,18 +70,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950 text-neutral-100`}
       >
+        {/* Header */}
         <header className="px-12 pt-10 pb-6">
           <div className="flex items-center justify-between gap-6">
             <Link
               href="/"
-              className="
-                inline-block
-                text-sm
-                tracking-[0.45em]
-                text-white/70
-                hover:text-white
-                transition
-              "
+              className="inline-block text-sm tracking-[0.45em] text-white/70 hover:text-white transition"
             >
               PHOTO LOG
             </Link>
@@ -96,8 +91,22 @@ export default function RootLayout({
           </div>
         </header>
 
+        {/* Page */}
         {children}
+
+        {/* Vercel Analytics */}
         <Analytics />
+
+        {/* Microsoft Clarity */}
+        <Script id="clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "wf6ngehb12");
+          `}
+        </Script>
       </body>
     </html>
   )
