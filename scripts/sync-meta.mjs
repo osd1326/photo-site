@@ -31,6 +31,9 @@ const meta = fs.existsSync(META_PATH)
   ? JSON.parse(fs.readFileSync(META_PATH, "utf-8") || "{}")
   : {}
 
+const today = formatDate(new Date())
+if (!meta._categories) meta._categories = {}
+
 const dirs = fs.readdirSync(PHOTOS_DIR).filter((d) => {
   return fs.statSync(path.join(PHOTOS_DIR, d)).isDirectory()
 })
@@ -49,8 +52,12 @@ for (const dir of dirs) {
     const nfcSrc = src.normalize("NFC")
     const existing = meta[nfcSrc] ?? {}
 
-    if (existing.takenAt && existing.width && existing.height) {
+if (existing.takenAt && existing.width && existing.height) {
       skipped++
+      if (!meta._categories[dir]) {
+        meta._categories[dir] = { updatedAt: today }
+        console.log(`📁 ${dir} → updatedAt: ${today} (初期化)`)
+      }
       continue
     }
 
