@@ -96,19 +96,15 @@ export default function Home() {
         .filter((f) => !IGNORE.has(f))
         .filter((f) => !f.toLowerCase().startsWith("cover"))
 
-      let latestMs = -1
-      for (const f of files) {
-        const st = fs.statSync(path.join(dirPath, f))
-        if (st.mtimeMs > latestMs) latestMs = st.mtimeMs
-      }
+const latest = (meta._categories as any)?.[cat.dir]?.updatedAt
 
-      return [
-        cat.slug,
-        {
-          count: files.length,
-          latest: latestMs > 0 ? formatDate(new Date(latestMs)) : undefined,
-        },
-      ]
+return [
+  cat.slug,
+  {
+    count: files.length,
+    latest,
+  },
+]
     })
   )
 
